@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book an Appointment | Bright Smile Dental & Medical Center</title>
+  <meta name="description" content="Book a dental or medical appointment at Bright Smile Dental & Medical Center in Columbus, OH. Same-day and next-day appointments available. New patients welcome." />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <div class="top-bar">
+    <div class="container">
+      <div class="top-bar-left">
+        <div class="top-bar-item"><i class="fas fa-map-marker-alt"></i><span>8200 Medical Center Dr, Suite 400, Columbus, OH 43215</span></div>
+        <div class="top-bar-item"><i class="fas fa-clock"></i><span>Mon–Thu 8AM–6PM | Fri 8AM–5PM | Sat 9AM–2PM</span></div>
+      </div>
+      <div class="top-bar-right">
+        <div class="top-bar-item"><i class="fas fa-star" style="color:#fbbf24"></i><span>4.9/5 Stars — 2,400+ Reviews</span></div>
+        <div class="top-bar-item"><i class="fas fa-shield-alt"></i><span>HIPAA Compliant | All Insurance Accepted</span></div>
+      </div>
+    </div>
+  </div>
+
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="nav-logo">
+        <div class="logo-icon">🦷</div>
+        <div class="logo-text">Bright Smile<span>Dental & Medical Center</span></div>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="about.html">Our Team</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="appointments.html" class="nav-appt active"><i class="fas fa-calendar-check"></i> Book Appointment</a></li>
+      </ul>
+      <button class="mobile-menu-btn" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <section class="appt-hero">
+    <div class="container">
+      <span class="section-label" style="background: rgba(255,255,255,0.15); color: rgba(255,255,255,0.9);">Easy Online Booking</span>
+      <h1>Book Your Appointment</h1>
+      <p>Schedule a dental or medical visit in minutes. Same-day and next-day appointments available for urgent needs. New patients always welcome!</p>
+    </div>
+  </section>
+
+  <section class="appt-section">
+    <div class="container">
+      <div class="appt-grid">
+
+        <div class="appt-form-card">
+          <h3>Appointment Request Form</h3>
+          <p>Fill out the secure form below and our team will confirm your appointment within 1 business hour.</p>
+
+          <div class="hipaa-notice">
+            <i class="fas fa-lock"></i>
+            <span><strong>HIPAA Protected:</strong> Your personal and health information is encrypted with 256-bit SSL and handled in full compliance with HIPAA privacy regulations.</span>
+          </div>
+
+          <form id="appt-form" novalidate>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="appt-name">Full Name <span style="color: var(--urgent);">*</span></label>
+                <input type="text" id="appt-name" name="name" class="form-input" placeholder="Jane Smith" required />
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="appt-dob">Date of Birth <span style="color: var(--urgent);">*</span></label>
+                <input type="date" id="appt-dob" name="dob" class="form-input" required />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="appt-phone">Phone Number <span style="color: var(--urgent);">*</span></label>
+                <input type="tel" id="appt-phone" name="phone" class="form-input" placeholder="(555) 000-0000" required />
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="appt-email">Email Address <span style="color: var(--urgent);">*</span></label>
+                <input type="email" id="appt-email" name="email" class="form-input" placeholder="jane@example.com" required />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="appt-provider">Provider Preference</label>
+                <select id="appt-provider" name="provider" class="form-select">
+                  <option value="No preference">No preference</option>
+                  <option value="Dr. Mitchell DDS">Dr. Mitchell, DDS</option>
+                  <option value="Dr. Park DDS">Dr. Park, DDS</option>
+                  <option value="Dr. Chen MD">Dr. Chen, MD</option>
+                  <option value="Dr. Torres MD">Dr. Torres, MD</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="appt-type">Appointment Type <span style="color: var(--urgent);">*</span></label>
+                <select id="appt-type" name="appt_type" class="form-select" required>
+                  <option value="" disabled selected>Select type…</option>
+                  <option value="New Patient Exam">New Patient Exam</option>
+                  <option value="Teeth Cleaning">Teeth Cleaning</option>
+                  <option value="Emergency Dental">Emergency Dental</option>
+                  <option value="Dental Consultation">Dental Consultation</option>
+                  <option value="Annual Physical">Annual Physical</option>
+                  <option value="Sick Visit">Sick Visit</option>
+                  <option value="Urgent Care Walk-In">Urgent Care Walk-In</option>
+                  <option value="Follow-Up Visit">Follow-Up Visit</option>
+                  <option value="Other">Other</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="appt-date">Preferred Date <span style="color: var(--urgent);">*</span></label>
+                <input type="date" id="appt-date" name="preferred_date" class="form-input" required />
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="appt-time">Preferred Time</label>
+                <select id="appt-time" name="preferred_time" class="form-select">
+                  <option value="Morning (8 AM – 12 PM)">Morning (8 AM – 12 PM)</option>
+                  <option value="Afternoon (12 PM – 4 PM)">Afternoon (12 PM – 4 PM)</option>
+                  <option value="Evening (4 PM – 6 PM)">Evening (4 PM – 6 PM)</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label">Are You a New Patient? <span style="color: var(--urgent);">*</span></label>
+                <div style="display: flex; gap: 1.5rem; margin-top: 0.75rem;">
+                  <label style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.9rem; cursor: pointer;">
+                    <input type="radio" name="new_patient" value="Yes" style="accent-color: var(--primary);" required /> Yes, new patient
+                  </label>
+                  <label style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.9rem; cursor: pointer;">
+                    <input type="radio" name="new_patient" value="No" style="accent-color: var(--primary);" /> Returning patient
+                  </label>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="appt-insurance">Insurance Provider</label>
+                <input type="text" id="appt-insurance" name="insurance" class="form-input" placeholder="e.g. Delta Dental, Aetna…" />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="appt-notes">Special Notes or Concerns</label>
+              <textarea id="appt-notes" name="notes" class="form-textarea" placeholder="Describe any specific concerns, allergies, or special needs we should know about…"></textarea>
+            </div>
+
+            <div class="form-checkbox">
+              <input type="checkbox" id="appt-sms-consent" name="sms_consent" />
+              <label for="appt-sms-consent">I consent to SMS appointment reminders and notifications from Bright Smile Dental &amp; Medical Center. Message &amp; data rates may apply. Reply STOP to opt out.</label>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-lg" style="width: 100%; justify-content: center;">
+              <i class="fas fa-calendar-check"></i> Confirm Appointment Request
+            </button>
+
+            <p style="font-size: 0.82rem; color: var(--gray-400); text-align: center; margin-top: 1rem;">
+              <i class="fas fa-mobile-alt" style="margin-right: 4px;"></i>You'll receive a confirmation text + 3 automatic reminders before your visit.
+            </p>
+
+          </form>
+        </div>
+
+        <div class="appt-sidebar">
+
+          <div class="appt-info-card">
+            <h3>Prefer to Call?</h3>
+            <a href="tel:5553842910" class="phone">(555) 384-2910</a>
+            <p>Our friendly scheduling team is standing by to get you booked quickly.</p>
+            <div style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 1rem; margin-top: 1rem; text-align: left;">
+              <div style="display: flex; justify-content: space-between; font-size: 0.8rem; padding: 0.3rem 0;">
+                <span style="color: rgba(255,255,255,0.55);">Mon – Thu</span>
+                <span style="color: #6ee7b7; font-weight: 600;">8 AM – 6 PM</span>
+              </div>
+              <div style="display: flex; justify-content: space-between; font-size: 0.8rem; padding: 0.3rem 0;">
+                <span style="color: rgba(255,255,255,0.55);">Friday</span>
+                <span style="color: #6ee7b7; font-weight: 600;">8 AM – 5 PM</span>
+              </div>
+              <div style="display: flex; justify-content: space-between; font-size: 0.8rem; padding: 0.3rem 0;">
+                <span style="color: rgba(255,255,255,0.55);">Saturday</span>
+                <span style="color: #6ee7b7; font-weight: 600;">9 AM – 2 PM</span>
+              </div>
+              <div style="display: flex; justify-content: space-between; font-size: 0.8rem; padding: 0.3rem 0;">
+                <span style="color: rgba(255,255,255,0.55);">Sunday</span>
+                <span style="color: rgba(255,255,255,0.35);">Closed</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="reminder-card">
+            <h3><i class="fas fa-mobile-alt"></i> Your Appointment Reminders</h3>
+            <p style="font-size: 0.82rem; color: var(--gray-600); margin-bottom: 1rem;">We automatically send 4 touchpoints to make sure you never miss your visit.</p>
+            <div class="reminder-steps">
+              <div class="reminder-step">
+                <i class="fas fa-check-circle"></i>
+                <div>
+                  <strong>Booking Confirmation</strong>
+                  <div style="font-size: 0.78rem; color: var(--gray-400); margin-top: 0.1rem;">Immediately after booking</div>
+                </div>
+              </div>
+              <div class="reminder-step">
+                <i class="fas fa-bell"></i>
+                <div>
+                  <strong>48-Hour Reminder</strong>
+                  <div style="font-size: 0.78rem; color: var(--gray-400); margin-top: 0.1rem;">Two days before your appointment</div>
+                </div>
+              </div>
+              <div class="reminder-step">
+                <i class="fas fa-sun"></i>
+                <div>
+                  <strong>Morning-Of Reminder</strong>
+                  <div style="font-size: 0.78rem; color: var(--gray-400); margin-top: 0.1rem;">Day of appointment at 8 AM</div>
+                </div>
+              </div>
+              <div class="reminder-step">
+                <i class="fas fa-star"></i>
+                <div>
+                  <strong>Post-Visit Review Request</strong>
+                  <div style="font-size: 0.78rem; color: var(--gray-400); margin-top: 0.1rem;">After your visit — "How did we do?"</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div style="background: white; border-radius: 16px; padding: 1.75rem; box-shadow: var(--shadow); border-left: 4px solid var(--secondary);">
+            <h3 style="font-size: 1rem; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
+              <i class="fas fa-clipboard-list" style="color: var(--secondary);"></i> First Visit? Here's What to Bring
+            </h3>
+            <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.6rem;">
+              <li style="display: flex; align-items: center; gap: 0.6rem; font-size: 0.85rem; color: var(--gray-700);">
+                <i class="fas fa-id-card" style="color: var(--primary); width: 16px;"></i> Insurance card (dental and/or medical)
+              </li>
+              <li style="display: flex; align-items: center; gap: 0.6rem; font-size: 0.85rem; color: var(--gray-700);">
+                <i class="fas fa-address-card" style="color: var(--primary); width: 16px;"></i> Photo ID (driver's license or passport)
+              </li>
+              <li style="display: flex; align-items: center; gap: 0.6rem; font-size: 0.85rem; color: var(--gray-700);">
+                <i class="fas fa-pills" style="color: var(--primary); width: 16px;"></i> List of current medications
+              </li>
+              <li style="display: flex; align-items: center; gap: 0.6rem; font-size: 0.85rem; color: var(--gray-700);">
+                <i class="fas fa-file-medical" style="color: var(--primary); width: 16px;"></i> Medical or dental records (if available)
+              </li>
+              <li style="display: flex; align-items: center; gap: 0.6rem; font-size: 0.85rem; color: var(--gray-700);">
+                <i class="fas fa-clock" style="color: var(--primary); width: 16px;"></i> Arrive 15 minutes early for new patient paperwork
+              </li>
+            </ul>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo" style="margin-bottom:1.25rem;display:inline-flex;">
+            <div class="logo-icon">🦷</div>
+            <div class="logo-text" style="color:white;">Bright Smile<span>Dental & Medical Center</span></div>
+          </a>
+          <p>Columbus's trusted dental and medical practice since 1999. Board-certified providers, compassionate care, and commitment to your long-term health.</p>
+          <div class="footer-social">
+            <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-google"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-yelp"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul class="footer-links">
+            <li><a href="services.html"><i class="fas fa-chevron-right"></i> General Dentistry</a></li>
+            <li><a href="services.html"><i class="fas fa-chevron-right"></i> Cosmetic Dentistry</a></li>
+            <li><a href="services.html"><i class="fas fa-chevron-right"></i> Primary Care</a></li>
+            <li><a href="services.html"><i class="fas fa-chevron-right"></i> Urgent Care</a></li>
+            <li><a href="services.html"><i class="fas fa-chevron-right"></i> Emergency Dental</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Patient Info</h4>
+          <ul class="footer-links">
+            <li><a href="about.html"><i class="fas fa-chevron-right"></i> Our Team</a></li>
+            <li><a href="appointments.html"><i class="fas fa-chevron-right"></i> Book Appointment</a></li>
+            <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact Us</a></li>
+            <li><a href="#"><i class="fas fa-chevron-right"></i> HIPAA Privacy Notice</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <div class="footer-contact-item"><i class="fas fa-map-marker-alt"></i><span>8200 Medical Center Drive, Suite 400<br>Columbus, OH 43215</span></div>
+          <div class="footer-contact-item"><i class="fas fa-phone-alt"></i><a href="tel:5553842910">(555) 384-2910</a></div>
+          <div class="footer-contact-item"><i class="fas fa-envelope"></i><a href="mailto:info@brightsmilemedical.com">info@brightsmilemedical.com</a></div>
+          <div class="footer-hipaa">
+            <p><i class="fas fa-lock"></i> All communications are</p>
+            <span class="hipaa-badge">🔒 HIPAA Compliant & Encrypted</span>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2024 Bright Smile Dental & Medical Center. All rights reserved. | Demo — not a real practice.</span>
+        <div class="footer-bottom-links">
+          <a href="#">HIPAA Privacy Notice</a>
+          <a href="#">Terms of Use</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div id="appt-success-modal" class="modal-overlay">
+    <div class="modal-card">
+      <div class="modal-icon success"><i class="fas fa-calendar-check"></i></div>
+      <h3>Appointment Request Confirmed!</h3>
+      <p>Thank you, <strong class="patient-name">Patient</strong>! We've received your request for a <strong class="appt-type">appointment</strong> on <strong class="appt-date">your selected date</strong>. Our team will confirm within 1 business hour.</p>
+      <div class="sms-preview">
+        <i class="fas fa-comment-alt"></i>
+        <span>Hi <span class="patient-name">there</span>! Your appointment at Bright Smile is confirmed for <span class="appt-date">your selected date</span>. Reply CONFIRM to confirm or CANCEL to cancel. Questions? Call (555) 384-2910</span>
+      </div>
+      <div class="modal-sequence">
+        <h4>Your Reminder Schedule</h4>
+        <div class="sequence-step">
+          <div class="sequence-dot"></div>
+          <span>Booking confirmation text sent</span>
+          <span class="step-time">Now</span>
+        </div>
+        <div class="sequence-step">
+          <div class="sequence-dot"></div>
+          <span>48-hour reminder text &amp; email</span>
+          <span class="step-time">2 days before</span>
+        </div>
+        <div class="sequence-step">
+          <div class="sequence-dot"></div>
+          <span>Morning-of reminder text at 8 AM</span>
+          <span class="step-time">Day of visit</span>
+        </div>
+        <div class="sequence-step">
+          <div class="sequence-dot" style="background: var(--secondary);"></div>
+          <span>"How did we do?" review request</span>
+          <span class="step-time">After visit</span>
+        </div>
+      </div>
+      <button class="btn btn-primary modal-close-btn" style="width: 100%; justify-content: center;">
+        <i class="fas fa-check"></i> Perfect, See You Soon!
+      </button>
+    </div>
+  </div>
+
+  <button class="chatbot-toggle" aria-label="Open Chat">
+    <i class="fas fa-comment-medical"></i>
+    <span class="chat-notification" style="display:none">1</span>
+  </button>
+  <div class="chatbot-window">
+    <div class="chatbot-header">
+      <div class="chatbot-avatar">🦷</div>
+      <div class="chatbot-header-info">
+        <h4>Bright Smile Assistant</h4>
+        <p><span class="online-dot"></span>Maya — Available Now</p>
+      </div>
+      <button class="chatbot-close"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="chatbot-messages"></div>
+    <div class="chatbot-quick-replies"></div>
+    <div class="chatbot-input-area">
+      <input type="text" class="chatbot-input" placeholder="Ask a question..." />
+      <button class="chatbot-send"><i class="fas fa-paper-plane"></i></button>
+    </div>
+  </div>
+  <script src="js/main.js"></script>
+</body>
+</html>
