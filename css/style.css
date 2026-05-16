@@ -107,12 +107,12 @@ section { padding: 5rem 0; }
 /* ===== NAVBAR ===== */
 .navbar {
   position: fixed;
-  top: 38px;
+  top: 46px;
   width: 100%;
   z-index: 1000;
   transition: all 0.3s ease;
   background: transparent;
-  padding: 1.4rem 0;
+  padding: 1.6rem 0;
 }
 .navbar.scrolled { background: var(--dark); padding: 1rem 0; box-shadow: var(--shadow-lg); }
 .navbar .container { display: flex; align-items: center; justify-content: space-between; }
@@ -165,7 +165,7 @@ section { padding: 5rem 0; }
 }
 .hero-bg { position: absolute; inset: 0; background-size: cover; background-position: center; }
 .hero-overlay { position: absolute; inset: 0; background: linear-gradient(135deg, rgba(15,23,42,0.92) 0%, rgba(8,145,178,0.72) 100%); }
-.hero-content { position: relative; z-index: 2; padding-top: 9rem; }
+.hero-content { position: relative; z-index: 2; padding-top: 10rem; }
 
 .hero-badge {
   display: inline-flex; align-items: center; gap: 0.5rem;
@@ -272,7 +272,7 @@ section { padding: 5rem 0; }
 
 /* ===== PAGE HERO ===== */
 .page-hero {
-  padding: 10.5rem 0 4rem;
+  padding: 11.5rem 0 4rem;
   background: linear-gradient(135deg, var(--dark) 0%, var(--primary-dark) 100%);
   position: relative; overflow: hidden;
 }
@@ -420,7 +420,7 @@ section { padding: 5rem 0; }
 
 /* ===== APPOINTMENTS PAGE ===== */
 .appt-hero {
-  padding: 10.5rem 0 4rem;
+  padding: 11.5rem 0 4rem;
   background: linear-gradient(135deg, var(--dark) 0%, var(--primary-dark) 100%);
   text-align: center; position: relative; overflow: hidden;
 }
